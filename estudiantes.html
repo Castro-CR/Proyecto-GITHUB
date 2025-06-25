@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudiantes</title> <!-- Título de la página -->
+</head>
+<body style="margin: 0; background-color: #f0f0f0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #333;">
+    <!--La página tiene un fondo gris, sin margenes y se utiliza el tipo de letra mencionado-->
+
+
+    <div style="min-height: 100vh; display: flex; flex-direction: column;">
+        <!--El contenedor principal con altura mínima, organiza las columnas-->
+
+    <header style="background-color: #4d4de7; text-align: center; padding: 20px; color: white;">
+        <!--El encabezado tiene un fondo morado, texto centrado y de color blanco-->
+        <h1>Módulo de Estudiantes</h1>
+    </header>
+
+
+    <nav>
+           <ul style="list-style: none; padding: 0; margin: 40px 0; display: flex; justify-content: center; gap: 20px;">
+            <!-- El menú de navegación centrado y con espacios-->
+
+           <li style="display: inline;"><a href="cursos.html" style="color: #020202; font-weight: bold; transition: color 0.3s ease;">Cursos</a></li>
+           <!-- Enlace a la página de cursos -->
+
+           <li style="display: inline;"><a href="profesores.html" style="color: #020202; font-weight: bold; transition: color 0.3s ease;">Profesores</a></li>
+            <!-- Enlace a la página de profesores -->
+
+           <li style="display: inline;"><a href="index.html" style="color: #020202; font-weight: bold; transition: color 0.3s ease;">Salir</a></li>
+            <!-- Enlace a la página de inicio de sesión -->
+        </ul>
+    </nav> 
+        
+
+    
+
+    <main style="width: 90%; margin: auto; padding: 20px; background-color: #e1dbdb; border-radius: 10px; box-shadow: 0 4px 8px rgb(8, 7, 7); text-align: center;">
+      <!--Contenedor principal, centrado-->
+      
+        <table style="table-layout: auto; width: 100%; margin: 40px auto; border-collapse: collapse;"><!--Tabla para mostrar la información de los estudiantes-->
+            <thead>
+                <tr style="background-color: #4d4de7; color: white;"><!--Encabezado de la tabla-->
+                    <th style="padding: 10px; border: 1px solid #dddd;">Nombre</th>
+                    <th style="padding: 10px; border: 1px solid #ddd;">Apellido</th>
+                    <th style="padding: 10px; border: 1px solid #ddd;">Correo Electrónico</th>
+                    <th style="padding: 10px; border: 1px solid #ddd;"> Materia que cursa</th>
+                    <th style="padding: 10px; border: 1px solid #ddd;">Sede</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!--Cuerpo de la tabla con los datos de los estudiantes-->
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #000000;">Juan</td>
+                    <td style="padding: 10px; border: 1px solid #000000;">Pérez</td>
+                    <td style="padding: 10px; border: 1px solid #000000;">juanperez@uc.ac.com</td>
+                    <td style="padding: 10px; border: 1px solid #000000;">Ingeniería en Informatica</td>
+                    <td style="padding: 10px; border: 1px solid #000000;">Sede Central</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #000000;">María</td>
+                    <td style="padding: 10px; border: 1px solid #000000;">Gómez</td>
+                    <td style="padding: 10px; border: 1px solid #000000;">mariagomez@uc.ac.com</td>
+                    <td style="padding: 10px; border: 1px solid #000000;">Contabilidad</td>
+                    <td style="padding: 10px; border: 1px solid #000000;">Sede Alajuela</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #000000;">Carlos</td>
+                    <td style="padding: 10px; border: 1px solid #000000;">López</td>
+                    <td style="padding: 10px; border: 1px solid #000000;">carloslopez@uc.ac.com</td>
+                    <td style="padding: 10px; border: 1px solid #000000;">Matemáticas</td>
+                    <td style="padding: 10px; border: 1px solid #000000;">Sede Virtual</td>
+                </tr>
+        </table>
+            </tbody>
+        
+        
+        
+
+    </main>
+    <footer style="text-align: center; padding: 20px; background-color: #4d4de7; color: white; margin-top: 60px;"> <!--Pie de página-->
+        <p><strong>Contacto:</strong> anthony@uc.ac.com</p>
+        <p>&copy; 2025 Módulo de Estudiantes Universidad Central</p>
+    </footer>
+    </div>
+</body>
+</html>

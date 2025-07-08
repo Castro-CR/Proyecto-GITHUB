@@ -1,0 +1,528 @@
+/* Estilos de la página de login */
+.pagina-login {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente de la página */
+    background-color: #00000057; /* Fondo */
+    background-image: url(https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);/* Imagen de fondo */
+    background-repeat: no-repeat; /* No repetir la imagen */
+    background-size: cover; /* La imagen cubre toda la pantalla */
+    background-position: center; /* Centrar la imagen de fondo */
+    background-attachment: fixed; /* Fijar la imagen de fondo */
+}
+
+.pagina-login .form-group label { /* Estilo de las etiquetas de los campos del formulario */
+    display: block;
+    margin: 10px 0 5px 0; /* Los márgenes*/
+    color: rgb(0, 0, 0); /* Color del texto */
+}
+
+.pagina-login .form-input { /* Estilo de los campos de entrada */
+    box-sizing: border-box; /* Incluir padding y borde dentro del ancho */
+    width: 100%; /* Ocupar todo el ancho disponible */
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #0a0808; /*Color del borde */
+    border-radius: 10px; /* Bordes redondeados */
+    transition: box-shadow 0.3s ease, border-color 0.3s ease; /* Transición suave al enfocar */
+}
+
+.pagina-login .form-input:focus { /* Efecto cuando se selecciona una opción */
+    border-color: #2c34a1; /* Cambiar el borde a azul oscuro */
+    outline: none;
+    box-shadow: 0 0 5px rgba(221, 8, 26, 0.5); /* Sombra en el campo */
+}
+
+.pagina-login .submit-button { /* Estilo del botón de iniciar sesión */
+    width: 100%; /* Ocupar todo el ancho disponible */
+    padding: 10px;
+    border: none; /* Sin borde */
+    border-radius: 104px; /* Bordes redondeados */
+    margin-top: 10px; /* Margen superior */
+    background-color: #1f2893; /* Fondo azul oscuro */
+    color: rgb(243, 240, 240); /* Color del texto */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición suave al pasar el mouse */
+}
+
+.pagina-login .submit-button:hover { /* Efecto hover sobre el botón */
+    box-shadow: 0 6px 6px rgb(64, 66, 47); /* Sombra al pasar el mouse */
+}
+
+.pagina-login .submit-button:active { /* Efecto al hacer clic en el botón */
+    background-color: #048825; 
+    transform: scale(0.98);
+}
+
+.pagina-login h1 { /* Título principal */
+    color: #0c0c0c; /* Color del texto */
+    text-align: center; /* Centrar el texto */
+    text-shadow: #0c949e 2px 2px 4px;
+}
+
+.pagina-login nav ul { /* Estilo de la navegación */
+    list-style-type: none; /* Quitar viñetas */
+    padding: 0;  /* Sin padding */
+    margin: 30px 0; /* Espaciado vertical */
+    display: flex;  /* Usar flexbox */
+    justify-content: center; /* Centrar los elementos */
+    gap: 20px;
+}
+
+.pagina-login nav ul li a { /* Estilo de los enlaces de navegación */
+    color: #cc0e0e;
+    text-decoration: none; /* Quitar subrayado */
+    font-weight: bold; /* Negrita */
+    transition: color 0.3s ease;
+}
+
+.pagina-login nav ul li a:hover { /* Efecto hover en los enlaces */
+    color: #f3f1f1; 
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+    text-shadow: #0a0808 2px 2px 4px;
+}
+
+.pagina-login main { /* Contenedor principal del formulario */
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    background-color: #ebe8e8;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgb(8, 7, 7); /* Sombra para dar profundidad */
+}
+
+.pagina-login #video-section { /* Sección del video */
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pagina-login #video-section iframe { /* Estilo del video */
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    border: none;
+}
+
+.pagina-login .flex-container { /* Contenedor flexible para el video */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+
+
+
+
+
+/*Estilos para pagina de profesores*/
+
+.pagina-profesores {
+    background-color: #00000057; /* Color de Fondo */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente de texto */
+}
+
+/* Encabezado de la página */
+.pagina-profesores header {
+    background-color: #4d4de7; /* Fondo azul */
+    text-align: center; /* Centrar el texto */
+    color: #f7f7f7; /* Texto blanco */
+}
+
+/* Párrafos */
+.pagina-profesores p {
+    text-align: center; /* Centrar el texto */
+    color: #0a0808; /* Texto negro */
+}
+
+/* Tabla de profesores */
+.pagina-profesores table {
+    width: 100%; /* Ancho total */
+    margin: 40px auto; /* Margen arriba/abajo y centrado horizontal */
+    border-collapse: collapse; /* Quitar espacio entre bordes */
+}
+
+/* Celdas de la tabla */
+.pagina-profesores th,
+.pagina-profesores td {
+    border: 1px solid #0a0808; /* Borde negro */
+    padding: 10px; /* Espaciado interno */
+    text-align: center; /* Centrar el contenido */
+}
+
+/* Encabezado de la tabla */
+.pagina-profesores th {
+    background-color: #2c34a1; /* Fondo azul oscuro */
+    color: #f3f1f1; /* Texto claro */
+}
+
+/* Celdas del cuerpo de la tabla */
+.pagina-profesores td {
+    background-color: #ebe8e8; /* Fondo gris claro */
+    color: #0a0808; /* Texto negro */
+}
+
+/* Menú de navegación */
+.pagina-profesores nav ul {
+    list-style-type: none; /* Quitar viñetas */
+    padding: 0; /* Sin padding */
+    margin: 30px 0; /* Espaciado vertical */
+    display: flex; /* Usar flexbox */
+    justify-content: center; /* Centrar texto */
+    gap: 20px; /* Espaciado entre texto */
+}
+
+/* Elementos de lista del menú */
+.pagina-profesores nav ul li {
+    display: inline; /* Mostrar en línea */
+}
+
+/* Enlaces del menú */
+.pagina-profesores nav ul li a {
+    color: #020202; /* Texto negro */
+    font-weight: bold; /* Negrita */
+    transition: color 0.3s ease; /* Transición de color */
+}
+
+/* Enlaces del menú al pasar el mouse */
+.pagina-profesores nav ul li a:hover {
+    color: #ffffff; /* Texto blanco al pasar el mouse */
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+/* Contenido principal */
+.pagina-profesores main {
+    width: 90%; /* Ancho del contenedor */
+    margin: auto; /* Centrar horizontalmente */
+    padding: 20px; /* Relleno interior */
+    background-color: #e1dbdb; /* Fondo claro */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgb(8, 7, 7); /* Sombra */
+}
+
+
+
+
+
+
+
+
+/* Estilos para página de estudiantes */
+.pagina-estudiantes {
+    background-color: #00000057; /* Fondo del texto */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente del texto */
+}
+
+/* Encabezado de la página */
+.pagina-estudiantes header {
+    background-color: #4d4de7; /* Fondo azul */
+    text-align: center; /* Centrar el texto */
+    color: #f7f7f7; /* Texto blanco */
+}
+
+/* Párrafos dentro de la página */
+.pagina-estudiantes p {
+    text-align: center; /* Centrar texto */
+    color: #0a0808; /* Color de texto oscuro */
+}
+
+/* Tabla de estudiantes */
+.pagina-estudiantes table {
+    width: 100%; /* Ocupar todo el ancho disponible */
+    margin: 40px auto; /* Espacio vertical y centrado horizontal */
+    border-collapse: collapse; /* Unir bordes de celdas */
+}
+
+/* Celdas y encabezados de la tabla */
+.pagina-estudiantes th,
+.pagina-estudiantes td {
+    border: 1px solid #0a0808; /* Borde negro alrededor de las celdas */
+    padding: 10px; /* Espacio interior */
+    text-align: center; /* Centrado del contenido */
+}
+
+/* Encabezados de la tabla */
+.pagina-estudiantes th {
+    background-color: #2c34a1; /* Fondo azul oscuro */
+    color: #f3f1f1; /* Texto claro */
+}
+
+/* Celdas normales de la tabla */
+.pagina-estudiantes td {
+    background-color: #ebe8e8; /* Fondo gris claro */
+    color: #0a0808; /* Texto oscuro */
+}
+
+/* Menú de navegación */
+.pagina-estudiantes nav ul {
+    list-style-type: none; /* Quitar viñetas */
+    padding: 0; /* Sin relleno interior */
+    margin: 30px 0; /* Espaciado vertical */
+    display: flex; /* Usar flexbox */
+    justify-content: center; /* Centrar horizontalmente */
+    gap: 20px; /* Espacio entre elementos */
+}
+
+/* Elementos de lista en línea */
+.pagina-estudiantes nav ul li {
+    display: inline; /* Mostrar en línea */
+}
+
+/* Estilo de enlaces del menú */
+.pagina-estudiantes nav ul li a {
+    color: #020202; /* Texto negro */
+    font-weight: bold; /* Negrita */
+    transition: color 0.3s ease; /* Transición suave del color */
+}
+
+/* Enlace al pasar el mouse */
+.pagina-estudiantes nav ul li a:hover {
+    color: #ffffff; /* Cambiar color del texto a blanco */
+    text-decoration: underline; /* Subrayar el enlace */
+}
+
+/* Contenido principal */
+.pagina-estudiantes main {
+    width: 90%; /* Ancho del contenedor */
+    margin: auto; /* Centrado horizontal */
+    padding: 20px; /* Espacio interno */
+    background-color: #e1dbdb; /* Fondo gris claro */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgb(8, 7, 7); /* Sombra para dar profundidad */
+}
+
+
+
+
+
+
+
+/* Estilo de la página de inicio de sesión */
+.pagina-iniciosesion{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente principal de la página */
+    background-image: url(https://images.unsplash.com/photo-1576267423445-b2e0074d68a4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); /* Imagen de fondo */
+    background-size: cover; /* La imagen cubre toda la pantalla */
+    background-position: center; /* Centrar la imagen */
+    background-repeat: no-repeat; /* No repetir la imagen */
+}
+
+/* Encabezado de la página */
+.pagina-iniciosesion header {
+    text-align: center; /* Centrar el texto del encabezado */
+    color: #090909; /* Color oscuro para el texto */
+}
+
+/* Párrafos dentro de la página */
+.pagina-iniciosesion p {
+    text-align: center; /* Centrar el texto */
+    color: #0a0808; /* Color del texto oscuro */
+}
+
+/* Contenedor principal del formulario */
+.pagina-iniciosesion main {
+    width: 100%; /* Ocupar todo el ancho disponible */
+    max-width: 600px; /* Ancho del formulario */
+    margin: auto; /* Centrar horizontalmente */
+    padding: 20px; /* Espacio interno */
+    background-color: #ebe8e8; /* Fondo */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgb(8, 7, 7); /* Sombra para dar profundidad */
+}
+
+/* Etiquetas de los campos del formulario */
+.pagina-iniciosesion .form-group label {
+    display: block; /* Mostrar en bloque para que ocupe toda la línea */
+    margin: 10px 0 5px 0; /* Espaciado externo */
+    color: rgb(0, 0, 0); /* Color del texto */
+}
+
+/* Campos de entrada del formulario */
+.pagina-iniciosesion .form-input {
+    box-sizing: border-box; /* Incluir padding y borde dentro del ancho */
+    width: 215%; /* Ocupar todo el ancho disponible */
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #0a0808; /* Borde negro */
+    border-radius: 10px; /* Bordes redondeados */
+    transition: box-shadow 0.3s ease, border-color 0.3s ease; /* Transición suave al enfocar */
+}
+
+/* Sección de Recordarme*/
+.pagina-iniciosesion .form-check {
+    display: flex; /* Alinear horizontalmente*/
+    align-items: center; /* Centrar*/
+    gap: 10px; /* Espacio entre casilla y el texto*/
+    margin: 15px 0; /* Espacio vertical*/
+}
+
+/*Tamaño de la casilla de Recordarme*/
+.pagina-iniciosesion .form-check-input { 
+    width: 18px;               /* Tamaño del checkbox */
+    height: 18px;
+    cursor: pointer;           /* Cambiar cursor */
+}
+
+/* Color de recordarme*/
+.pagina-iniciosesion .form-check-label {
+    color: #000;               /* Color del texto */
+    cursor: pointer;           /* Hacer clickeable el texto */
+}
+
+/* Efecto cuando se selecciona una opción */
+.pagina-iniciosesion .form-input:focus {
+    border-color: #2c34a1; /* Cambiar el borde a azul oscuro */
+    outline: none; /* Eliminar borde azul predeterminado del navegador */
+    box-shadow: 0 0 5px rgba(221, 8, 26, 0.5); /* Sombra en el campo */
+}
+
+/* Botón de iniciar sesión */
+.pagina-iniciosesion .submit-button {
+    width: auto; /* Ocupar todo el ancho disponible */
+    max-width: 200px; /* Ancho máximo del botón */
+    padding: 10px 30px; /* Espaciado interno */
+    display: block; 
+    margin: 20px auto; /* Centrar el botón horizontalmente */
+    border: 1px solid #f3f1f1; /* Borde claro */
+    border-radius: 104px; /* Bordes redondeados */
+    background-color: #2c34a1; /* Fondo azul oscuro */
+    color: #f3f1f1; /* Texto blanco */
+    cursor: pointer; /* Cambiar cursor al pasar por encima */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+}
+
+/* Efecto hover sobre el botón */
+.pagina-iniciosesion .submit-button:hover {
+    box-shadow: 0 6px 6px rgb(64, 66, 47); /* Sombra al pasar el mouse */
+}
+
+/* Efecto al hacer clic en el botón */
+.pagina-iniciosesion .submit-button:active {
+    background-color: #048825; /* Cambiar color de fondo al hacer clic */
+    transform: scale(0.98); /* Reducir tamaño ligeramente al presionar */
+}
+
+/* Título principal */
+.pagina-iniciosesion h1 {
+    color: #0c0c0c; /* Color del texto del título */
+    text-align: center; /* Centrar el texto */
+    text-shadow: #0c949e 2px 2px 4px; /* Sombra azul para el texto */
+}
+
+/* Navegación en la página */
+.pagina-iniciosesion nav ul {
+    list-style-type: none; /* Quitar viñetas */
+    padding: 0; /* Eliminar padding */
+    margin: 30px 0; /* Espaciado vertical */
+    display: flex; /* Usar flexbox */
+    justify-content: center; /* Centrar los elementos */
+    gap: 20px; /* Espacio entre los ítems */
+}
+
+/* Estilo de los enlaces */
+.pagina-iniciosesion nav ul li a {
+    color: #100f0f; /* Color del texto */
+    font-weight: bold; /* Negrita */
+    transition: color 0.3s ease; /* Transición del color */
+    background-color: rgb(119, 161, 195); /* Fondo azul claro */
+    padding: 5px 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    text-decoration: none; /* Quitar subrayado */
+}
+
+/* Efecto hover en enlaces */
+.pagina-iniciosesion nav ul li a:hover {
+    color: #f3f1f1; /* Cambiar texto a blanco */
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+
+
+
+
+
+
+
+
+/* Estilo general de la página de cursos */
+.pagina-cursos {
+    background-color: #00000057; /* Fondo */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente de texto de la página */
+}
+
+/* Encabezado de la página de cursos */
+.pagina-cursos header {
+    background-color: #4d4de7; /* Fondo azul del encabezado */
+    text-align: center; /* Centra el texto del encabezado */
+    color: #f7f7f7; /* Color del texto */
+}
+
+/* Estilo para los párrafos dentro de la página de cursos */
+.pagina-cursos p {
+    text-align: center; /* Centrar el texto */
+    color: #0a0808; /* Color del texto */
+}
+
+/* Estilos para la tabla de cursos */
+.pagina-cursos table {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    margin: 40px auto; /* Centra la tabla horizontalmente y agrega margen vertical */
+    border-collapse: collapse; /* Elimina el espacio entre las celdas */
+}
+
+/* Estilo para celdas de encabezado y contenido */
+.pagina-cursos th,
+.pagina-cursos td {
+    border: 1px solid #0a0808; /* Borde negro para cada celda */
+    padding: 10px; /* Espaciado interno en celdas */
+    text-align: center; /* Centra el contenido del texto */
+}
+
+/* Estilo específico para los encabezados de la tabla */
+.pagina-cursos th {
+    background-color: #2c34a1; /* Fondo azul oscuro */
+    color: #f3f1f1; /* Texto blanco */
+}
+
+/* Estilo específico para las celdas normales */
+.pagina-cursos td {
+    background-color: #ebe8e8; /* Fondo gris claro */
+    color: #0a0808; /* Color de texto */
+}
+
+/* Estilos para la barra de navegación */
+.pagina-cursos nav ul {
+    list-style-type: none; /* Elimina viñetas */
+    padding: 0; /* Elimina el relleno */
+    margin: 30px 0; /* Margen superior e inferior */
+    display: flex; /* Usa flexbox */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    gap: 20px; /* Espacio entre los ítems */
+}
+
+/* Hace que los elementos del menú se muestren en línea */
+.pagina-cursos nav ul li {
+    display: inline; /* Mostrar los ítems en línea */
+}
+
+/* Estilo de los enlaces de navegación */
+.pagina-cursos nav ul li a {
+    color: #020202; /* Color negro para el texto */
+    font-weight: bold; /* Texto en negrita */
+    transition: color 0.3s ease; /* Transición suave al cambiar color */
+    text-decoration: none; /* Quitar subrayado */
+}
+
+/* Efecto al pasar el mouse sobre los enlaces */
+.pagina-cursos nav ul li a:hover {
+    color: #ffffff; /* Cambiar color del texto a blanco */
+    text-decoration: underline; /* Subrayado al hacer hover */
+}
+
+/* Estilo del contenido principal de la página */
+.pagina-cursos main {
+    width: 90%; /* Ocupa el 90% del ancho disponible */
+    margin: auto; /* Centrado horizontal */
+    padding: 20px; /* Espaciado interno */
+    background-color: #e1dbdb; /* Fondo gris claro */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgb(8, 7, 7); /* Sombra para dar profundidad */
+}

@@ -1,86 +1,65 @@
+<!--Página de cursos-->
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cursos</title><!-- Título de la página -->
+    <title>Profesores</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
-<body style="background-color: #f0f0f0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #333;">
-    <!-- La página tiene un fondo gris, sin márgenes y se utiliza el tipo de letra mencionado -->
-
-    <div style="min-height: 100vh; display: flex; flex-direction: column;">
-    <!-- El contenedor principal con altura mínima, organiza las columnas -->
-
-        <header style="background-color: #4d4de7; text-align: center; padding: 20px; color: white;">
-        <!-- El encabezado tiene un fondo morado, texto centrado y de color blanco -->
-        <h1>Módulo de Cursos</h1>
+<body class="pagina-cursos">
+    <header>
+        <h1>Módulo de cursos</h1>
     </header>
-    
-    
 
-    <nav>
-         <ul style="list-style: none; padding: 0; margin: 40px 0; display: flex; justify-content: center; gap: 20px;">
-            <!-- El menú de navegación centrado y con espacios -->
-
-            <li style="display: inline;"><a href="estudiantes.html" style="color: #020202; font-weight: bold; transition: color 0.3s ease;">Estudiantes</a></li>
-            <!-- Enlace a la página de estudiantes -->
-
-            <li style="display: inline;"><a href="profesores.html" style="color: #020202; font-weight: bold; transition: color 0.3s ease;">Profesores</a></li>
-            <!-- Enlace a la página de profesores -->
-
-            <li style="display: inline;"><a href="index.html" style="color: #020202; font-weight: bold; transition: color 0.3s ease;">Salir</a></li>
-            <!-- Enlace a la página de inicio de sesión -->
+    <nav class="menu">
+        <ul>
+            <li><a href="Estudiantes.html">Estudiantes</a></li>
+            <li><a href="Profesores.html">Profesores</a></li>
+            <li><a href="index.html">Salir</a></li>
         </ul>
     </nav>
-       
-
-    <main style="width: 90%; margin: auto; padding: 20px; background-color: #e1dbdb; border-radius: 10px; box-shadow: 0 4px 8px rgb(8, 7, 7); text-align: center;">
-        <!-- Contenedor principal, centrado -->
-
-        <table style="width: 100%; margin: 40px auto; border-collapse: collapse;">
-        <!-- Tabla para mostrar la información de los cursos -->
-
-            <thead>
-                <tr style="background-color: #4d4de7; color: white;">
-                    <th style="padding: 10px; border: 1px solid #dddd;">Profesor que imparte el curso</th>
-                    <th style="padding: 10px; border: 1px solid #dddd;">Nombre del Curso</th>
-                    <th style="padding: 10px; border: 1px solid #ddd;">Código del Curso</th>
-                    <th style="padding: 10px; border: 1px solid #ddd;">Descripción</th>
-                    <th style="padding: 10px; border: 1px solid #ddd;">Créditos</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Cuerpo de la tabla con los datos de los cursos y profesores -->
-                <tr>
-                    <td style="padding: 10px; border: 1px solid #000000;">Harold Badilla</td>
-                    <td style="padding: 10px; border: 1px solid #000000;">Programación Básica</td>
-                    <td style="padding: 10px; border: 1px solid #000000;">PB101</td>
-                    <td style="padding: 10px; border: 1px solid #000000;">Introducción a la programación con Python.</td>
-                    <td style="padding: 10px; border: 1px solid #000000;">3</td>
-                </tr>
-                <tr>
-                    <td style="padding: 10px; border: 1px solid #000000;">María López</td>
-                    <td style="padding: 10px; border: 1px solid #000000;">Matemáticas Discretas</td>
-                    <td style="padding: 10px; border: 1px solid #000000;">MD202</td>
-                    <td style="padding: 10px; border: 1px solid #000000;">Fundamentos de matemáticas discretas.</td>
-                    <td style="padding: 10px; border: 1px solid #000000;">4</td>
-                </tr>
-                <tr>
-                    <td style="padding: 10px; border: 1px solid #000000;">Carlos Gómez</td>
-                    <td style="padding: 10px; border: 1px solid #000000;">Cuentas Contables</td>
-                    <td style="padding: 10px; border: 1px solid #000000;">BD303</td>
-                    <td style="padding: 10px; border: 1px solid #000000;">Manejo y calculo de cuentas contables de la empresa</td>
-                    <td style="padding: 10px; border: 1px solid #000000;">3</td>
-                </tr>
-    </tbody>
-        </table>
+    <main>
+        <section>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Profesor que imparte el curso</th>
+                        <th>Nombre del curso</th>
+                        <th>Código del curso</th>
+                        <th>Descripción</th>
+                        <th>Créditos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Harold Badilla</td>
+                        <td>Programación Básica</td>
+                        <td>PB101</td>
+                        <td>Introducción a la programación con Python</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>María López</td>
+                        <td>Matemáticas Discretas</td>
+                        <td>MD202</td>
+                        <td>Fundamentos de Matemáticas Discretas</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>Carlos Gómez</td>
+                        <td>Cuentas Contables</td>
+                        <td>BD303</td>
+                        <td>Manejo y calculo de cuentas contables empresariales</td>
+                        <td>3</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
     </main>
-
-    <!-- Pie de página -->
-    <footer style="background-color: #4d4de7; text-align: center; padding: 20px; color: white;">
-           <strong>Contacto:</strong> anthony@uc.ac.com
-        <p>&copy; 2025 Módulo de cursos Universidad Central</p>
+    <footer>
+        <p>&copy; 2025 Módulo de Profesores</p>
+        <p>Contacto: <a href="mailto:acastro@uc.ac.com">acastro@uc.ac.com</a></p>
     </footer>
-    </div>
 </body>
 </html>

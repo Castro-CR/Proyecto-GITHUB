@@ -1,74 +1,47 @@
 <!--Página de Registro-->
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro</title><!-- Título de la página -->
+    <title>Registro</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
+<body class="pagina-login">
+    <header>
+        <h1> Registro en Plataforma educativa Universidad Central</h1>
+    </header>
 
-<body style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-background-image: url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); background-size: cover; color: #333;">
-<!-- Aquí se aplica el tipo de letra, color del texto y una imagen de fondo que cubre toda la pantalla -->
-
-    <header style="background-color: 4d4de7; text-align: center; padding: 10px; color: rgb(25, 22, 228);">
-        <!-- Encabezado de la página con texto centrado y color azul -->
-        <h1>Registro de Usuario</h1>
-   </header>
-
-<nav>
-    <ul style="list-style: none; padding: 0; margin: 30px 0; display: flex; justify-content: center; gap: 20px;">
-        <!-- Menú de navegación centrado y con espacios -->
-
-        <li style="display: inline;"><a href="estudiantes.html" style="color: #020202; font-weight: bold; transition: color 0.3s ease;">Estudiantes</a></li>
-        <!-- Enlace a la página de estudiantes -->
-
-        <li style="display: inline;"><a href="cursos.html" style="color: #020202; font-weight: bold; transition: color 0.3s ease;">Cursos</a></li>
-        <!-- Enlace a la página de cursos -->
-
-        <li style="display: inline;"><a href="profesores.html" style="color: #020202; font-weight: bold; transition: color 0.3s ease;">Profesores</a></li>
-        <!-- Enlace a la página de profesores -->
-
-        <li style="display: inline;"><a href="index.html" style="color: #000000; font-weight: bold; transition: color 0.3s ease;">Salir</a></li>
-        <!-- Enlace a la página de inicio de sesión -->
+    <!--Menu-->
+   <nav class="menu">
+    <ul>
+        <li><a href="index.html">Iniciar sesión</a></li>
     </ul>
-
 </nav>
-    <main style="max-width: 600px;  margin: auto; padding: 20px; background-color: #eeecec; border-radius: 8px; box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);">
-        <!-- Contenedor principal, centrado -->
-        <section>
 
-        <form>
-              <!--Agrupa los espacios del formulario-->
+
+    <main>
+        <section>
+        <form action="#" method="post">
         <fieldset>
         <legend>Registro de Usuario</legend>
 
-            <!-- Formulario de registro -->
         <div class="form-group">
-
-            <!-- Espacio para el nombre completo -->
-            <label for="name" style="display: block; margin: 10px 0 5px 0; color: rgb(0, 0, 0);">Nombre Completo:</label>
-            <input class="form-input" type="text" id="name" name="name" required style="box-sizing: border-box; width: 100%; padding: 10px; border: 1px solid #914b4b; border-radius: 10px;">
-        
-
-            <!-- Espacio para el nombre de usuario -->
-        <label for="username" style="display: block; margin-bottom: 5px; color: #000000">Nombre de Usuario:</label>
-        <input class="form-input" type="text" id="username" name="username" required style="box-sizing: border-box; width: 100%; padding: 10px; border: 1px solid #914b4b; border-radius: 10px;">
-
-             <!-- Espacio para el correo electrónico -->
-        <label for="email" style="display: block; margin-bottom: 5px; color: #000">Correo Electrónico:</label>
-        <input class="form-input" type="email" id="email" name="email" required style="box-sizing: border-box; width: 100%; padding: 10px; border: 1px solid #914b4b; border-radius: 10px;">
-
-             <!-- Espacio para la contraseña -->
-        <label for="password" style="display: block; margin-bottom: 5px; color: #000">Contraseña:</label>
-        <input class="form-input" type="password" id="password" name="password" required style="box-sizing: border-box; width: 100%; padding: 10px; border: 1px solid #914b4b; border-radius: 10px;">
+            <label for="name">Nombre Completo:</label>
+            <input class="form-input" type="text" id="name" name="name" required>
         </div>
-        </fieldset>
 
+        <label for="username">Nombre de Usuario:</label>
+        <input class="form-input" type="text" id="username" name="username" required>
+
+        <label for="email">Correo Electrónico:</label>
+        <input class="form-input" type="email" id="email" name="email" required>
+
+        <label for="password">Contraseña:</label>
+        <input class="form-input" type="password" id="password" name="password" required>
 
         <div>
-        <!-- Espacio para seleccionar el género -->
-            <fieldset style="border-radius: 10px; padding: 10px; background-color: #f0f0f0; border: 1px solid #914b4b;">
+            <fieldset>
         <legend>Genero</legend>
         <div>
             <div> <input type="radio" value="m" name="genero" id="g-m">
@@ -86,8 +59,7 @@ background-image: url('https://images.unsplash.com/photo-1541339907198-e08756ded
         </div>
         </fieldset>
 
-        <!-- Espacio para seleccionar los intereses -->
-        <fieldset style="border-radius: 10px; padding: 10px; background-color: #f0f0f0; border: 1px solid #914b4b; margin-top: 10px;">
+        <fieldset>
         <legend>Seleccione sus intereses</legend>
         <div>
             <div> <input type="checkbox" name="intereses" id="interes1" value="programacion">
@@ -99,19 +71,14 @@ background-image: url('https://images.unsplash.com/photo-1541339907198-e08756ded
             <div> <input type="checkbox" name="intereses" id="interes3" value="marketing">
             <label for="interes3">Marketing Digital</label>
             </div>
-
-            <!--Botón de registrar-->
-        <button type="submit" style="width: 100%; padding: 10px; border: none; border-radius: 104px; margin-top: 10px; background-color: #1f2893; color: rgb(255, 255, 255);
-        cursor: pointer; font-weight: bold; transition: background-color 0.3s ease;">Registrar</button> 
-
+        <button class="submit-button" type="submit">Registrar</button>
         </fieldset>
         </div>
+        
         </form>
         </section>
-
-        <!-- Sección para el video incrustado -->
-        <section id="video-section" style="display: flex; justify-content: center; align-items: center; margin-top: 20px;">
-     <iframe width="100%" height="315" 
+        <section id="video-section">
+     <iframe width="560" height="315" 
     src="https://www.youtube.com/embed/Si1ur_uq_N0" 
     title="Video Incrustado" frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -119,10 +86,7 @@ background-image: url('https://images.unsplash.com/photo-1541339907198-e08756ded
 </iframe>
         </section>
     </main>
-
-    <!-- Pie de página -->
-    <footer>
-        <p style="text-align: center; margin-top: 20px; color: #ffffff; font-size: 0.9em;">&copy; 2025 Registro de usuarios Universidad Central</p>
-        <p style="text-align: center; margin-top: 20px; color: #ffffff; font-size: 0.9em;">Contacto: <a href="mailto:anthony@uc.ac.com">anthony@uc.ac.com</a></p></footer>
+    <footer><p>&copy; 2025 Plataforma Educativa Universidad Central</p>
+    <p>Contacto: <a href="mailto:anthony@uc.ac.com">anthony@uc.ac.com</a></p></footer>
 </body>
 </html>

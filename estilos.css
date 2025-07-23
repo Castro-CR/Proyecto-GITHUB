@@ -127,6 +127,11 @@
     color: #f3f1f1; /* Texto claro */
 }
 
+.tabla-cont {
+    overflow-x: auto; /* Permitir desplazamiento horizontal en pantallas pequeñas */
+    width: 100%; /* Ancho total */
+}
+
 
 
 

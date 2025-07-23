@@ -1,6 +1,6 @@
 <?php include 'db.php'; ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +13,7 @@
     </header>
 
     <!--Menu-->
-   <nav class="menu">
+<nav class="menu">
     <ul>
         <li><a href="index.html">Iniciar sesión</a></li>
     </ul>
@@ -24,7 +24,7 @@
         <section>
         <form action="procesar.php" method="POST">
         <fieldset>
-        <legend>Registro de Usuario</legend>
+        <legend>Registro de Estudiantes</legend>
 
         <div class="form-group">
             <label for="name">Nombre:</label>
@@ -74,6 +74,10 @@
             <div> <input type="checkbox" name="intereses[]" id="interes3" value="Marketing Digital">
             <label for="interes3">Marketing Digital</label>
             </div>
+            <div> <input type="checkbox" id="interes_otro">
+            <label for="interes_otro">Otro</label>
+            <input type="text" name="otro_interes" id="otro_interes_texto" placeholder="Especifique" style="display: none; margin-left: 10px;">
+            </div>
         </div>
         </fieldset>
         <button class="submit-button" type="submit">Registrar</button>
@@ -81,6 +85,7 @@
         </section>
 
         <section>
+            <div class="tabla-cont">
                     <table class="tabla-registro">
             <thead>
                 <tr>
@@ -107,15 +112,16 @@
                             <td>".htmlspecialchars($row['genero'])."</td>
                             <td>{$row['intereses']}</td>
                             <td>{$row['fecha_registro']}</td>
-                          </tr>";
+                        </tr>";
                 }
                 ?>
             </tbody>
+            </div>
         </table>
         </section>
 
         <section id="video-section">
-     <iframe width="560" height="315" 
+        <iframe width="560" height="315" 
         src="https://www.youtube.com/embed/Si1ur_uq_N0" 
         title="Video Incrustado" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -128,5 +134,7 @@
         <p>&copy; 2025 Módulo de Registro</p>
         <p>Contacto: <a href="mailto:acastro@uc.ac.com">acastro@uc.ac.com</a></p>
     </footer>
+
+    <script src="script.js" defer></script>
 </body>
 </html>

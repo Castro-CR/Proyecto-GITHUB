@@ -637,3 +637,8 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+
+.contenedor-tabla {
+    width: 100%;
+    overflow-x: auto;
+}

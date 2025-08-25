@@ -39,6 +39,7 @@ include 'db.php'; ?>
                 </div> <!--Filtro de búsqueda-->
                 <input type="text" id="filtro-busqueda" class="filtro-busqueda" placeholder="Buscar por nombre, correo, etc.">
                 </div>
+                <div class="contenedor-tabla">
                 <table>
                     <thead>
                         <tr>
@@ -49,6 +50,7 @@ include 'db.php'; ?>
                             <th>Curso</th>
                             <th>Estudiantes</th>
                             <th>Sede</th>
+                            <th>Detalles</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -90,7 +92,9 @@ include 'db.php'; ?>
                             <td></td>
                         </tr>
                     </tbody>
-                </table> <!-- Botones de confirmación y cancelar-->
+                </table>
+                </div>
+                <!-- Botones de confirmación y cancelar-->
                 <div id="controles-confirmacion" class="controles-confirmacion">
                     <button type="submit" id="btn-guardar-nuevo" name="confirmar_agregado" class="boton-agregar-nuevo" style="display: none;">Guardar Profesor</button>
                     <button type="submit" id="btn-confirmar-eliminacion" name="confirmar_eliminacion" class="boton-confirmar-eliminar" style="display: none;">Confirmar Eliminación</button>

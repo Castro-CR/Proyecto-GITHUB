@@ -49,7 +49,6 @@ include 'db.php'; ?>
                             <th>Curso</th>
                             <th>Estudiantes</th>
                             <th>Sede</th>
-                            <th>Detalles</th>
                         </tr>
                     </thead>
                     <tbody>

@@ -1,4 +1,11 @@
-<?php include 'db.php'; ?>
+<?php 
+session_start();
+if (!isset($_SESSION['usuario_id'])) {
+    header('Location: index.php');
+    exit();
+}
+
+include 'db.php'; ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -19,15 +26,18 @@
         <ul>
             <li><a href="Estudiantes.php">Estudiantes</a></li>
             <li><a href="Cursos.php">Cursos</a></li>
-            <li><a href="index.html">Salir</a></li>
+            <li><a href="cerrar_sesion.php">Salir</a></li>
         </ul>
     </nav>
     <main>
-        <section>
+        <section> <!--Botones parte superior-->
             <form id="form-profesores" method="POST" action="procesar_profes.php">
-                <div class="acciones-superiores">
-                    <button type="button" id="btn-agregar">Agregar</button>
-                    <button type="button" id="btn-eliminar">Eliminar</button>
+                <div class="botones">
+                    <div><button type="button" id="btn-agregar" class="boton-agregar">Agregar</button>
+                    <button type="button" id="btn-editar" class="boton-editar">Editar</button>
+                    <button type="button" id="btn-eliminar" class="boton-eliminar">Eliminar</button>
+                </div> <!--Filtro de búsqueda-->
+                <input type="text" id="filtro-busqueda" class="filtro-busqueda" placeholder="Buscar por nombre, correo, etc.">
                 </div>
                 <table>
                     <thead>
@@ -43,7 +53,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php
+                        <?php //Consulta de SQL
                         $stmt = $pdo->query("SELECT * FROM profesores ORDER BY id ASC");
                         while ($profesor = $stmt->fetch(PDO::FETCH_ASSOC)) {
                             echo "<tr class='fila-profesor'>";
@@ -67,13 +77,26 @@
                             <td><input type="text" name="nuevo_curso" placeholder="Curso"></td>
                             <td><input type="number" name="nuevo_estudiantes" placeholder="Cantidad"></td>
                             <td><input type="text" name="nuevo_sede" placeholder="Sede"></td>
+                            <td></td>
+                        </tr>
+                        <tr id="fila-editar" class="fila-editar" style="display: none;">
+                            <td class="checkbox-eliminar"></td>
+                            <input type="hidden" name="editar_id" id="editar_id">
+                            <td><input type="text" name="editar_nombre" id="editar_nombre" placeholder="Nombre del estudiante"></td>
+                            <td><input type="text" name="editar_apellidos" id="editar_apellidos" placeholder="Apellidos del estudiante"></td>
+                            <td><input type="email" name="editar_correo" id="editar_correo" placeholder="Correo electrónico"></td>
+                            <td><input type="text" name="editar_curso_imparte" id="editar_curso_imparte" placeholder="Materia que cursa"></td>
+                            <td><input type="number" name="editar_estudiantes_asignados" id="editar_estudiantes_asignados" placeholder="Estudiantes"></td>
+                            <td><input type="text" name="editar_sede_imparte" id="editar_sede_imparte" placeholder="Sede"></td>
+                            <td></td>
                         </tr>
                     </tbody>
-                </table>
+                </table> <!-- Botones de confirmación y cancelar-->
                 <div id="controles-confirmacion" class="controles-confirmacion">
-                    <button type="submit" id="btn-guardar-nuevo" name="confirmar_agregado" style="display: none;">Guardar Profesor</button>
-                    <button type="submit" id="btn-confirmar-eliminacion" name="confirmar_eliminacion" style="display: none;">Confirmar Eliminación</button>
-                    <button type="button" id="btn-cancelar">Cancelar</button>
+                    <button type="submit" id="btn-guardar-nuevo" name="confirmar_agregado" class="boton-agregar-nuevo" style="display: none;">Guardar Profesor</button>
+                    <button type="submit" id="btn-confirmar-eliminacion" name="confirmar_eliminacion" class="boton-confirmar-eliminar" style="display: none;">Confirmar Eliminación</button>
+                    <button type="submit" id="btn-confirmar-edicion" name="confirmar_edicion" class="boton-confirmar-editar" style="display: none;">Confirmar Edición</button>
+                    <button type="button" id="btn-cancelar" class="boton-cancelar">Cancelar</button>
                 </div>
             </form>
         </section>
@@ -86,7 +109,8 @@
         document.addEventListener('DOMContentLoaded', () => {
             inicializarPaginaCRUD({
                 formId: 'form-profesores',
-                nombreEntidad: 'profesor'
+                nombreEntidad: 'profesor',
+                selectorFila: '#form-profesores .fila-profesor'
             });
         });
     </script>

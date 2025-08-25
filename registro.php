@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
     <link rel="stylesheet" href="estilos.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body class="pagina-login">
     <header>
@@ -15,7 +16,7 @@
     <!--Menu-->
 <nav class="menu">
     <ul>
-        <li><a href="index.html">Iniciar sesión</a></li>
+        <li><a href="index.php">Iniciar sesión</a></li>
     </ul>
 </nav>
 
@@ -84,42 +85,6 @@
         </form>
         </section>
 
-        <section>
-            <div class="tabla-cont">
-                    <table class="tabla-registro">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Nombre</th>
-                    <th>Apellidos</th>
-                    <th>Correo Electrónico</th>
-                    <th>Fecha de Nacimiento</th>
-                    <th>Género</th>
-                    <th>Intereses</th>
-                    <th>Fecha de Registro</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                $stmt = $pdo->query("SELECT * FROM alumnos ORDER BY fecha_registro DESC");
-                while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                    echo "<tr>
-                            <td>{$row['id']}</td>
-                            <td>".htmlspecialchars($row['nombre'])."</td>
-                            <td>".htmlspecialchars($row['apellidos'])."</td>
-                            <td>".htmlspecialchars($row['correo'])."</td>
-                            <td>{$row['fecha_de_nacimiento']}</td>
-                            <td>".htmlspecialchars($row['genero'])."</td>
-                            <td>{$row['intereses']}</td>
-                            <td>{$row['fecha_registro']}</td>
-                        </tr>";
-                }
-                ?>
-            </tbody>
-            </div>
-        </table>
-        </section>
-
         <section id="video-section">
         <iframe width="560" height="315" 
         src="https://www.youtube.com/embed/Si1ur_uq_N0" 
@@ -136,5 +101,24 @@
     </footer>
 
     <script src="script.js" defer></script>
+    <script src="script.js" defer></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('status') === 'success') {
+                Swal.fire({
+                    title: "¡Registro Exitoso!",
+                    text: "Ya puedes iniciar sesión con tus credenciales.",
+                    icon: "success",
+                    confirmButtonColor: '#007bff'
+                }).then(() => {
+                    window.history.replaceState({}, document.title, window.location.pathname);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
 </body>
 </html>

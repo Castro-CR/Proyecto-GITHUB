@@ -68,7 +68,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ]);
     }
 
-    // Al terminar, redirigimos a la página principal de profesores
+    // Lógica para EDITAR
+    if (isset($_POST['confirmar_edicion']) && !empty($_POST['editar_id'])) {
+        $sql = "UPDATE profesores SET nombre = ?, apellidos = ?, correo = ?, curso_imparte = ?, estudiantes_asignados = ?, sede_imparte = ? WHERE id = ?";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([
+            $_POST['editar_nombre'],
+            $_POST['editar_apellidos'],
+            $_POST['editar_correo'],
+            $_POST['editar_curso_imparte'],
+            $_POST['editar_estudiantes_asignados'],
+            $_POST['editar_sede_imparte'],
+            $_POST['editar_id']
+        ]);
+    }
+
     header('Location: Profesores.php?status=success');
     exit();
 }

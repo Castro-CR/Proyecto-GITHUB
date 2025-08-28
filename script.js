@@ -166,7 +166,6 @@ function inicializarPaginaCRUD(config) {
     if (filtroInput) {
         filtroInput.addEventListener('keyup', () => {
             const terminoBusqueda = filtroInput.value.toLowerCase();
-            // La búsqueda de filas se hace aquí para que siempre esté actualizada
             const filasParaFiltrar = document.querySelectorAll(config.selectorFila);
 
             filasParaFiltrar.forEach(fila => {
